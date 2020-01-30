@@ -5,18 +5,20 @@ body {
 }
 .head1 {
     font-family: 'Lobster', cursive;
-    text-align: center;
-    font-size: 25px;
-    background: rgb(60, 195, 216);
+    text-align: left;
+    font-size: 50px;
+    background: rgb(119, 189, 198);
     text-decoration: underline;
     color: white;
+    padding: 5px;
 }
 .head2 {
     font-family: 'Lobster', cursive;
-    text-align: center;
-    font-size: 25px;
+    text-align: left;
+    font-size: 50px;
     text-decoration: underline;
-    color: rgb(60, 195, 216);
+    color: rgb(119, 189, 198);
+    padding: 5px;
 }
 .head3 {
     font-family: sans-serif;
@@ -38,13 +40,13 @@ body {
 .name {
     grid-row: 1;
     grid-column: 1;
-    background: rgb(60, 195, 216);
+    background: rgb(119, 189, 198);
     color: white;
 }
 .contact {
     grid-row: 2;
     grid-column: 1;
-    background: rgb(60, 195, 216);
+    background: rgb(119, 189, 198);
 }
 .skills {
     grid-row: 1;
@@ -57,7 +59,7 @@ body {
 .experience {
     grid-row: 1 / span 2;
     grid-column: 3;
-    background: rgb(60, 195, 216);
+    background: rgb(119, 189, 198);
 }
 .hobbies {
     grid-row: 1 / span 2;
@@ -68,12 +70,25 @@ body {
     display: block;
     max-width: 96%;
 }
-.media {
-    list-style: none;
-    margin: 10px 30px;
-    font-size: 20px;
-    padding: 20px 20px;
-    color: rgb(60, 195, 216);
+.icon {
+    /* color: white;
+    fill: white;*/
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(173deg) brightness(104%) contrast(104%);
+    /*border-radius: 40px;*/
+    /*padding: 5%;*/
+    /*padding: 5px 0px 5px 125px;*/
+    /*margin: 5%;*/
+    /*border-radius:10%;*/
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    transition: all 0.3s ease-in-out 0s;
+}
+.icon:hover{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
 }
 .text1 {
     font-family: sans-serif;
@@ -89,13 +104,13 @@ body {
     font-family: Arial;
     text-align: left;
     list-style-type: none;
-    color: rgb(60, 195, 216);
+    color: rgb(119, 189, 198);
 }
 .text2 {
     font-family: sans-serif;
     font-size: 15px;
     padding: 15px;
-    color: rgb(60, 195, 216);
+    color: rgb(119, 189, 198);
     padding-left: 15px;
     list-style-position: inside;
 }
@@ -105,3 +120,26 @@ body {
     font-family: sans-serif;
     font-size: 20px;
 }
+a {
+    text-decoration: none;
+}
+
+.media {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: 25% 75%;
+    place-items: center;
+}
+[src *= "codepen"] {grid-row: 1; grid-column: 1;}
+[src *= "linked"] {grid-row: 2; grid-column: 1;}
+[src *= "git"] {grid-row: 3; grid-column: 1;}
+[src *= "rank"] {grid-row: 4; grid-column: 1;}
+[src *= "envelope"] {grid-row: 5; grid-column: 1;}
+[src *= "codew"] {grid-row: 6; grid-column: 1;}
+
+[span *= "codepen"] {
+    visibility: hidden;
+}
+.media2 {}
+.media3
